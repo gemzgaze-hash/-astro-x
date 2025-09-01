@@ -78,6 +78,7 @@ ContentFrame.Position = UDim2.new(0, 0, 0, 50)
 ContentFrame.BackgroundTransparency = 1
 ContentFrame.ScrollingDirection = Enum.ScrollingDirection.Y
 ContentFrame.ScrollBarThickness = 4
+ContentFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y -- هذا السطر المهم
 ContentFrame.Parent = MainFrame
 
 -- حقل إدخال Animation ID
@@ -557,9 +558,6 @@ StopBangShotButton.MouseButton1Click:Connect(function()
     BangShotButton.BackgroundColor3 = Color3.fromRGB(200, 60, 60)
     BangShotButton.Text = "💥 بانق شوت"
 end)
-
--- تهيئة الواجهة
-ContentFrame.CanvasSize = UDim2.new(0, 0, 0, 475)
 
 -- إعادة إنشاء الواجهة عند موت اللاعب
 player.CharacterAdded:Connect(function()
